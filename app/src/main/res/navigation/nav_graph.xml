@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.rumeysaozer.kazanamazitakip.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_orucFragment"
+            app:destination="@id/orucFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_namazFragment"
+            app:destination="@id/namazFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orucFragment"
+        android:name="com.rumeysaozer.kazanamazitakip.OrucFragment"
+        android:label="fragment_oruc"
+        tools:layout="@layout/fragment_oruc" >
+        <action
+            android:id="@+id/action_orucFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/namazFragment"
+        android:name="com.rumeysaozer.kazanamazitakip.NamazFragment"
+        android:label="fragment_namaz"
+        tools:layout="@layout/fragment_namaz" >
+        <action
+            android:id="@+id/action_namazFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+</navigation>
